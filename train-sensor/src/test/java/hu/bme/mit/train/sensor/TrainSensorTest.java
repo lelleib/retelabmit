@@ -42,4 +42,10 @@ public class TrainSensorTest {
         trainSensor.overrideSpeedLimit(3);
         verify(mockTU, times(1)).setAlarmState(false);
     }
+
+    @Test
+    public void SpeedLimit_Init() {
+        int sL = trainSensor.getSpeedLimit();
+        Assert.assertEquals(5, sL);
+    }
 }
